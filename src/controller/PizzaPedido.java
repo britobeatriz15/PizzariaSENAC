@@ -1,5 +1,7 @@
 package controller;
 
+import dao.ClienteDAO;
+import dao.SaborEscolhidoDAO;
 import model.Cliente;
 import model.SaborEscolhido;
 
@@ -46,11 +48,10 @@ public class PizzaPedido {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Principal");
-        frame.setContentPane();
+        frame.setContentPane(new PizzaPedido().JPanelPizzaria);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.setMinimumSize(new Dimension(800, 800));
-        frame.setJMenuBar(menuBar);
         frame.pack();
     }
 
@@ -68,6 +69,9 @@ public class PizzaPedido {
                 cliente.setNomeCliente(jTextFieldNomeCliente.getText());
                 cliente.setEndereçoCliente(jTextFieldEndereçoCompleto.getText());
                 cliente.setTelefoneCliente(Integer.parseInt(jTextFieldTelefoneCliente.getText()));
+
+                ClienteDAO dao = new ClienteDAO();
+                dao.salvar(cliente);
             }
         });
 
@@ -93,6 +97,9 @@ public class PizzaPedido {
                 sabor.setPizzaQuatroQueijos(jRadioButtonQuatroQueijos.isSelected());
                 sabor.setPizzaChocolate(jRadioButtonChocolate.isSelected());
                 sabor.setPizzaPrestigio(jRadioButtonPrestigio.isSelected());
+
+                SaborEscolhidoDAO dao = new SaborEscolhidoDAO();
+                dao.salvar(sabor);
             }
         });
         jButtonFinalizar.addActionListener(new ActionListener() {

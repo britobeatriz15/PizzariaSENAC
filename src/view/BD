@@ -1,0 +1,25 @@
+use pedidos;
+
+create table cliente(
+numero_pedido int primary key auto_increment,
+data_pedido DATE,
+nome_cliente varchar(255),
+endereco varchar(255),
+telefone int
+);
+
+create table sabor(
+tamanho_pequena tinyint(1),
+tamanho_media tinyint(1),
+tamanho_grande tinyint(1),
+sabor_calabresa tinyint(1),
+sabor_quatro_queijos tinyint(1),
+sabor_chocolate tinyint(1),
+sabor_prestigio tinyint(1)
+);
+
+insert into cliente (numero_pedido, data_pedido, nome_cliente, endereco, telefone)
+values (1,'2020-06-21', 'fulano', 'qualquer', 01278934);
+
+insert into sabor (tamanho_pequena, tamanho_media, tamanho_grande, sabor_calabresa, sabor_quatro_queijos, sabor_chocolate, sabor_prestigio)
+values (1,0,0, 1, 0, 0, 0);
