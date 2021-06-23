@@ -38,15 +38,25 @@ public class PizzaPedido {
     private JLabel jLabelEndereço;
     private JLabel jLabelTelefone;
     private JPanel JPanelPizzaria;
-    private JTextField jTextFieldTamanho;
-    private JTextField jTextFieldSabor;
+    private JTextField jTextFieldQuantidadeMedia;
+    private JTextField jTextFieldSaborPizzaMedia;
     private JLabel jLabelPrestigio;
     private JLabel jLabelChocolate;
     private JLabel jLabelQuatroQueijo;
     private JLabel jLabelCalabresa;
-    private JLabel jLabelTamanhoGrande;
-    private JLabel jLabelTamanhoMedio;
-    private JLabel jLabelTamanhoPequeno;
+    private JTextField jTextFieldQuantidadePizzaPequena;
+    private JTextField jTextFieldQuantidadePizzaGrande;
+    private JTextField jTextFieldSaborPizzaPequena;
+    private JTextField jTextFieldSaborPizzaGrande;
+    private JRadioButton jRadioButtonPequena;
+    private JRadioButton jRadioButtonMedia;
+    private JRadioButton jRadioButtonGrande;
+    private JLabel jLabelQuantidadePequena;
+    private JLabel jLabelQuantidadeMedia;
+    private JLabel jLabelQuantidadeGrande;
+    private JLabel jLabelSaborP;
+    private JLabel jLabelSaborM;
+    private JLabel jLabelSaborG;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Principal");
@@ -92,7 +102,15 @@ public class PizzaPedido {
             @Override
             public void actionPerformed(ActionEvent e) {
                 SaborEscolhido sabor = new SaborEscolhido();
-               jTextFieldTamanho.setText();
+                sabor.setTamanhoPequena(jRadioButtonPequena.isSelected());
+                sabor.setTamanhoMedia(jRadioButtonMedia.isSelected());
+                sabor.setTamanhoGrande(jRadioButtonGrande.isSelected());
+                sabor.setQuantidadePequena(Integer.parseInt(jTextFieldQuantidadePizzaPequena.getText()));
+                sabor.setQuantidadeMedia(Integer.parseInt(jTextFieldQuantidadeMedia.getText()));
+                sabor.setQuantidadeGrande(Integer.parseInt(jTextFieldQuantidadePizzaGrande.getText()));
+                sabor.getSaborPequena(jTextFieldSaborPizzaPequena.getText());
+                sabor.getSaborMedia(jTextFieldSaborPizzaMedia.getText());
+                sabor.getSaborGrande(jTextFieldSaborPizzaGrande.getText());
 
 
                 SaborEscolhidoDAO dao = new SaborEscolhidoDAO();
@@ -102,6 +120,7 @@ public class PizzaPedido {
         jButtonFinalizar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog((Component)null,"Pedido realizado com sucesso");
 
             }
         });

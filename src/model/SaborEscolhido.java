@@ -4,10 +4,12 @@ public class SaborEscolhido {
     private Boolean tamanhoPequena;
     private Boolean tamanhoMedia;
     private Boolean tamanhoGrande;
-    private Boolean pizzaCalabresa;
-    private Boolean pizzaQuatroQueijos;
-    private Boolean pizzaChocolate;
-    private Boolean pizzaPrestigio;
+    private int quantidadePequena;
+    private int quantidadeMedia;
+    private int quantidadeGrande;
+    private String saborPequena;
+    private String saborMedia;
+    private String saborGrande;
 
     public Boolean getTamanhoPequena() {
         return tamanhoPequena;
@@ -33,35 +35,61 @@ public class SaborEscolhido {
         this.tamanhoGrande = tamanhoGrande;
     }
 
-    public Boolean getPizzaCalabresa() {
-        return pizzaCalabresa;
+    public int getQuantidadePequena() {
+        return quantidadePequena;
     }
 
-    public void setPizzaCalabresa(Boolean pizzaCalabresa) {
-        this.pizzaCalabresa = pizzaCalabresa;
+    public void setQuantidadePequena(int quantidadePequena) {
+        this.quantidadePequena = quantidadePequena;
     }
 
-    public Boolean getPizzaQuatroQueijos() {
-        return pizzaQuatroQueijos;
+    public int getQuantidadeMedia() {
+        return quantidadeMedia;
     }
 
-    public void setPizzaQuatroQueijos(Boolean pizzaQuatroQueijos) {
-        this.pizzaQuatroQueijos = pizzaQuatroQueijos;
+    public void setQuantidadeMedia(int quantidadeMedia) {
+        this.quantidadeMedia = quantidadeMedia;
     }
 
-    public Boolean getPizzaChocolate() {
-        return pizzaChocolate;
+    public int getQuantidadeGrande() {
+        return quantidadeGrande;
     }
 
-    public void setPizzaChocolate(Boolean pizzaChocolate) {
-        this.pizzaChocolate = pizzaChocolate;
+    public void setQuantidadeGrande(int quantidadeGrande) {
+        this.quantidadeGrande = quantidadeGrande;
     }
 
-    public Boolean getPizzaPrestigio() {
-        return pizzaPrestigio;
+    public String getSaborPequena() {
+        return saborPequena;
     }
 
-    public void setPizzaPrestigio(Boolean pizzaPrestigio) {
-        this.pizzaPrestigio = pizzaPrestigio;
+    public void setSaborPequena(String saborPequena) {
+        this.saborPequena = saborPequena;
+    }
+
+    public String getSaborMedia() {
+        return saborMedia;
+    }
+
+    public void setSaborMedia(String saborMedia) {
+        this.saborMedia = saborMedia;
+    }
+
+    public String getSaborGrande() {
+        return saborGrande;
+    }
+
+    public void setSaborGrande(String saborGrande) {
+        this.saborGrande = saborGrande;
+    }
+
+    public void getSaborPequena(String text) {
+    }
+
+    public void getSaborMedia(String text) {
+    }
+
+    public void getSaborGrande(String text) {
     }
 }
+
