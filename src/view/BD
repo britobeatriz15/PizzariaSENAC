@@ -23,3 +23,6 @@ values (1,'2020-06-21', 'fulano', 'qualquer', 01278934);
 
 insert into sabor (tamanho_pequena, tamanho_media, tamanho_grande, sabor_calabresa, sabor_quatro_queijos, sabor_chocolate, sabor_prestigio)
 values (1,0,0, 1, 0, 0, 0);
+
+select c. * FROM cliente c;
+select s. * FROM sabor s;

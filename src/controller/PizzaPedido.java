@@ -24,15 +24,8 @@ public class PizzaPedido {
     private JButton jButtonCadastrar;
     private JButton jButtonLimpar;
     private JLabel jLabelCardapio;
-    private JRadioButton jRadioButtonTamanhoPequeno;
-    private JRadioButton jRadioButtonTamanhoMedia;
-    private JRadioButton jRadioButtonGrande;
     private JLabel jLabelTamanhoPizza;
     private JLabel jLabelSabores;
-    private JRadioButton jRadioButtonCalabresa;
-    private JRadioButton jRadioButtonQuatroQueijos;
-    private JRadioButton jRadioButtonChocolate;
-    private JRadioButton jRadioButtonPrestigio;
     private JButton jButtonAdicionar;
     private JButton jButtonFinalizar;
     private JLabel jLabelSaborQuatroQueijo;
@@ -45,6 +38,15 @@ public class PizzaPedido {
     private JLabel jLabelEndereço;
     private JLabel jLabelTelefone;
     private JPanel JPanelPizzaria;
+    private JTextField jTextFieldTamanho;
+    private JTextField jTextFieldSabor;
+    private JLabel jLabelPrestigio;
+    private JLabel jLabelChocolate;
+    private JLabel jLabelQuatroQueijo;
+    private JLabel jLabelCalabresa;
+    private JLabel jLabelTamanhoGrande;
+    private JLabel jLabelTamanhoMedio;
+    private JLabel jLabelTamanhoPequeno;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Principal");
@@ -90,13 +92,8 @@ public class PizzaPedido {
             @Override
             public void actionPerformed(ActionEvent e) {
                 SaborEscolhido sabor = new SaborEscolhido();
-                sabor.setTamanhoPequena(jRadioButtonTamanhoPequeno.isSelected());
-                sabor.setTamanhoMedia(jRadioButtonTamanhoMedia.isSelected());
-                sabor.setTamanhoGrande(jRadioButtonGrande.isSelected());
-                sabor.setPizzaCalabresa(jRadioButtonCalabresa.isSelected());
-                sabor.setPizzaQuatroQueijos(jRadioButtonQuatroQueijos.isSelected());
-                sabor.setPizzaChocolate(jRadioButtonChocolate.isSelected());
-                sabor.setPizzaPrestigio(jRadioButtonPrestigio.isSelected());
+               jTextFieldTamanho.setText();
+
 
                 SaborEscolhidoDAO dao = new SaborEscolhidoDAO();
                 dao.salvar(sabor);

@@ -7,8 +7,8 @@ import java.sql.SQLException;
 
 public class SaborEscolhidoDAO {
     public void salvar(SaborEscolhido s) {
-        String insert = "INSERT INTO pedido (tamanho_pequena, tamanho_media, tamanho_grande, sabor_calabresa, sabor_quatro_queijos, sabor_chocolate, sabor_prestigio)" +
-                "VALUES ('?,?,?,?,?,?,?)";
+        String insert = "INSERT INTO sabor (tamanho_pequena, tamanho_media, tamanho_grande, sabor_calabresa, sabor_quatro_queijos, sabor_chocolate, sabor_prestigio)" +
+                "VALUES (?,?,?,?,?,?,?)";
 
         PreparedStatement ps = null;
         try {

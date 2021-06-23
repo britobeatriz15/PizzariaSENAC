@@ -5,10 +5,12 @@ import model.Cliente;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import static dao.ConnectionDataBase.getConnection;
+
 public class ClienteDAO {
     public void salvar(Cliente c){
-        String insert = "INSERT INTO pedido (numero_pedido, data_pedido, nome_cliente, endereco, telefone)"+
-        "VALUES ('?,?,?,?,?)";
+        String insert = "INSERT INTO cliente (numero_pedido, data_pedido, nome_cliente, endereco, telefone)"+
+        "VALUES (?,?,?,?,?)";
 
         PreparedStatement ps = null;
         try{
@@ -25,6 +27,7 @@ public class ClienteDAO {
         }catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+
 
     }
 }

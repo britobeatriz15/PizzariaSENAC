@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionDataBase {
-    private static String URL_MYSQL = "jdbc:mysql://localhost/pizzariasenac";
+    private static String URL_MYSQL = "jdbc:mysql://localhost/pedidos";
     private static String DRIVER = "com.mysql.jdbc.Driver";
     private static String PASSWORD = "root";
     private static String USER = "root";
