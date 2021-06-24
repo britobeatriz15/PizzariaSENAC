@@ -12,17 +12,22 @@ create table sabor(
 tamanho_pequena tinyint(1),
 tamanho_media tinyint(1),
 tamanho_grande tinyint(1),
-sabor_calabresa tinyint(1),
-sabor_quatro_queijos tinyint(1),
-sabor_chocolate tinyint(1),
-sabor_prestigio tinyint(1)
+quantidade_pequena int,
+quantidade_media int,
+quantidade_grande int,
+sabor_pequena varchar(255),
+sabor_media varchar(255),
+sabor_grande varchar(255)
 );
+
+drop table cliente;
+drop table sabor;
 
 insert into cliente (numero_pedido, data_pedido, nome_cliente, endereco, telefone)
 values (1,'2020-06-21', 'fulano', 'qualquer', 01278934);
 
-insert into sabor (tamanho_pequena, tamanho_media, tamanho_grande, sabor_calabresa, sabor_quatro_queijos, sabor_chocolate, sabor_prestigio)
-values (1,0,0, 1, 0, 0, 0);
+insert into sabor (tamanho_pequena, tamanho_media, tamanho_grande, quantidade_pequena, quantidade_media, quantidade_grande, sabor_pequena, sabor_media, sabor_grande)
+values (1,0,0, 1, 0, 0, 'calabresa','','');
 
 select c. * FROM cliente c;
 select s. * FROM sabor s;

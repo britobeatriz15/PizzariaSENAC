@@ -32,13 +32,12 @@ public class PizzaPedido {
     private JLabel jLabelSaborChocolate;
     private JLabel jLabelSaborPrestigio;
     private JLabel jLabelSaborCalabresa;
-    private JLabel jLabelNomePedido;
     private JLabel jLabelDataPedido;
     private JLabel jLabelNomeCliente;
     private JLabel jLabelEndereço;
     private JLabel jLabelTelefone;
     private JPanel JPanelPizzaria;
-    private JTextField jTextFieldQuantidadeMedia;
+    private JTextField jTextFieldTamanho;
     private JTextField jTextFieldSaborPizzaMedia;
     private JLabel jLabelPrestigio;
     private JLabel jLabelChocolate;
@@ -50,13 +49,13 @@ public class PizzaPedido {
     private JTextField jTextFieldSaborPizzaGrande;
     private JRadioButton jRadioButtonPequena;
     private JRadioButton jRadioButtonMedia;
-    private JRadioButton jRadioButtonGrande;
-    private JLabel jLabelQuantidadePequena;
-    private JLabel jLabelQuantidadeMedia;
-    private JLabel jLabelQuantidadeGrande;
     private JLabel jLabelSaborP;
     private JLabel jLabelSaborM;
     private JLabel jLabelSaborG;
+    private JRadioButton jButtonPequena;
+    private JRadioButton jButtonMedia;
+    private JRadioButton jButtonGrande;
+    private JTextField jTextFieldQuantidade;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Principal");
@@ -72,8 +71,7 @@ public class PizzaPedido {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Cliente cliente = new Cliente();
-                cliente.setNumeroPedido(Integer.parseInt(jTextFieldNumeroPedido.getText()));
-                try {
+                 try {
                     cliente.setDataPedido(new SimpleDateFormat("dd/MM/yyyy").parse(jTextFieldDataPedido.getText()));
                 } catch (ParseException parseException) {
                     parseException.printStackTrace();
@@ -102,15 +100,15 @@ public class PizzaPedido {
             @Override
             public void actionPerformed(ActionEvent e) {
                 SaborEscolhido sabor = new SaborEscolhido();
-                sabor.setTamanhoPequena(jRadioButtonPequena.isSelected());
-                sabor.setTamanhoMedia(jRadioButtonMedia.isSelected());
-                sabor.setTamanhoGrande(jRadioButtonGrande.isSelected());
+                if (jButtonPequena.isSelected()){
+                    sabor.setTamanho("Pequeno");
+                } else if (jButtonMedia.isSelected())
+                    sabor.setTamanhoPizza("Medio");
+                else
+                    sabor.setTamanhoPizza("Grande");
+
                 sabor.setQuantidadePequena(Integer.parseInt(jTextFieldQuantidadePizzaPequena.getText()));
-                sabor.setQuantidadeMedia(Integer.parseInt(jTextFieldQuantidadeMedia.getText()));
-                sabor.setQuantidadeGrande(Integer.parseInt(jTextFieldQuantidadePizzaGrande.getText()));
-                sabor.getSaborPequena(jTextFieldSaborPizzaPequena.getText());
-                sabor.getSaborMedia(jTextFieldSaborPizzaMedia.getText());
-                sabor.getSaborGrande(jTextFieldSaborPizzaGrande.getText());
+                sabor.getSaborPizza(jTextFieldSaborPizzaPequena.getText());
 
 
                 SaborEscolhidoDAO dao = new SaborEscolhidoDAO();

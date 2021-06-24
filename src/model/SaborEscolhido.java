@@ -1,30 +1,48 @@
 package model;
 
 public class SaborEscolhido {
-    private Boolean tamanhoPequena;
-    private Boolean tamanhoMedia;
+    private Boolean tamanhoPequeno;
+    private Boolean tamanhoMedio;
     private Boolean tamanhoGrande;
-    private int quantidadePequena;
-    private int quantidadeMedia;
-    private int quantidadeGrande;
+    private int quantidade;
     private String saborPequena;
     private String saborMedia;
     private String saborGrande;
 
-    public Boolean getTamanhoPequena() {
-        return tamanhoPequena;
+    public int getQuantidade() {
+        return quantidade;
     }
 
-    public void setTamanhoPequena(Boolean tamanhoPequena) {
-        this.tamanhoPequena = tamanhoPequena;
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
 
-    public Boolean getTamanhoMedia() {
-        return tamanhoMedia;
+    public void setSaborPequena(String saborPequena) {
+        this.saborPequena = saborPequena;
     }
 
-    public void setTamanhoMedia(Boolean tamanhoMedia) {
-        this.tamanhoMedia = tamanhoMedia;
+    public void setSaborMedia(String saborMedia) {
+        this.saborMedia = saborMedia;
+    }
+
+    public void setSaborGrande(String saborGrande) {
+        this.saborGrande = saborGrande;
+    }
+
+    public Boolean getTamanhoPequeno() {
+        return tamanhoPequeno;
+    }
+
+    public void setTamanhoPequeno(Boolean tamanhoPequeno) {
+        this.tamanhoPequeno = tamanhoPequeno;
+    }
+
+    public Boolean getTamanhoMedio() {
+        return tamanhoMedio;
+    }
+
+    public void setTamanhoMedio(Boolean tamanhoMedio) {
+        this.tamanhoMedio = tamanhoMedio;
     }
 
     public Boolean getTamanhoGrande() {
@@ -35,52 +53,12 @@ public class SaborEscolhido {
         this.tamanhoGrande = tamanhoGrande;
     }
 
-    public int getQuantidadePequena() {
-        return quantidadePequena;
+    public String getSaborPizza() {
+        return saborPizza;
     }
 
-    public void setQuantidadePequena(int quantidadePequena) {
-        this.quantidadePequena = quantidadePequena;
-    }
-
-    public int getQuantidadeMedia() {
-        return quantidadeMedia;
-    }
-
-    public void setQuantidadeMedia(int quantidadeMedia) {
-        this.quantidadeMedia = quantidadeMedia;
-    }
-
-    public int getQuantidadeGrande() {
-        return quantidadeGrande;
-    }
-
-    public void setQuantidadeGrande(int quantidadeGrande) {
-        this.quantidadeGrande = quantidadeGrande;
-    }
-
-    public String getSaborPequena() {
-        return saborPequena;
-    }
-
-    public void setSaborPequena(String saborPequena) {
-        this.saborPequena = saborPequena;
-    }
-
-    public String getSaborMedia() {
-        return saborMedia;
-    }
-
-    public void setSaborMedia(String saborMedia) {
-        this.saborMedia = saborMedia;
-    }
-
-    public String getSaborGrande() {
-        return saborGrande;
-    }
-
-    public void setSaborGrande(String saborGrande) {
-        this.saborGrande = saborGrande;
+    public void setSaborPizza(String saborPizza) {
+        this.saborPizza = saborPizza;
     }
 
     public void getSaborPequena(String text) {
@@ -90,6 +68,33 @@ public class SaborEscolhido {
     }
 
     public void getSaborGrande(String text) {
+    }
+
+
+    
+
+    public void setTamanhoPizza(String medio) {
+    }
+
+    public void setTamanho(String pequeno) {
+    }
+
+    public void setQuantidadePequena(int parseInt) {
+    }
+
+    public void getSaborPizza(String text) {
+    }
+
+    public Object getSaborPequena() {
+    }
+
+    public Object getSaborMedia() {
+    }
+
+    public Object getSaborGrande() {
+    }
+
+    public Object getQuantidadePizza() {
     }
 }
 

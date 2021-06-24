@@ -14,12 +14,10 @@ public class SaborEscolhidoDAO {
         try {
             ps = ConnectionDataBase.getConnection().prepareStatement(insert);
 
-            ps.setObject(1, s.getTamanhoPequena());
-            ps.setObject(2, s.getTamanhoMedia());
-            ps.setObject(3, s.getTamanhoGrande());
-            ps.setObject(4, s.getQuantidadePequena());
-            ps.setObject(5, s.getQuantidadeMedia());
-            ps.setObject(5, s.getQuantidadeGrande());
+            ps.setObject(1, s.getTamanhoPequeno());
+            ps.setObject(1, s.getTamanhoMedio());
+            ps.setObject(1, s.getTamanhoGrande());
+            ps.setObject(4, s.getQuantidadePizza());
             ps.setObject(5, s.getSaborPequena());
             ps.setObject(5, s.getSaborMedia());
             ps.setObject(5, s.getSaborGrande());
